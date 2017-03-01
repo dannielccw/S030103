@@ -47,7 +47,7 @@
         android:onClick="click2" />
 
     <Button
-        android:text="按下後跳至第四頁"
+        android:text="按下後跳至第四頁, 並startActivityForResult等第四頁傳回資料, 第一頁resume()回來後會呼叫onActivityResult()"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/button2"
