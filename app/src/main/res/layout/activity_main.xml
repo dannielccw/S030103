@@ -45,4 +45,23 @@
         android:layout_alignStart="@+id/editText"
         android:id="@+id/button2"
         android:onClick="click2" />
+
+    <Button
+        android:text="按下後跳至第四頁"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginTop="47dp"
+        android:id="@+id/button3"
+        android:onClick="click3" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button3"
+        android:layout_alignStart="@+id/button3"
+        android:id="@+id/textView5"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 </RelativeLayout>

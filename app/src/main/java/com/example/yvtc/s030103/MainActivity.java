@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 //dan.w: test
 public class MainActivity extends AppCompatActivity {
@@ -34,6 +35,19 @@ public class MainActivity extends AppCompatActivity {
         it.putExtras(b);
         //it.putExtra("msg", str);
         startActivity(it);
+    }
 
+    public void click3(View v)
+    {
+        Intent it=new Intent(MainActivity.this, FourthActivity.class);
+        startActivityForResult(it, 321);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        super.onActivityResult(requestCode, resultCode, data);
+        TextView tv5 = (TextView) findViewById(R.id.textView5);
+        tv5.setText(data.getStringExtra("ans"));
     }
 }
+
