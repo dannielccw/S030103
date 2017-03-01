@@ -18,7 +18,9 @@ public class ThirdActivity extends AppCompatActivity {
         tv= (TextView) findViewById(R.id.textView3);
 
         Intent it = getIntent();
-        String m = it.getStringExtra("msg");
+        Bundle b = it.getExtras();
+        String m = b.getString("msg");
+        //String m = it.getStringExtra("msg");
         tv.setText(m);
     }
 }
