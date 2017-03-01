@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 //dan.w: test2
 public class MainActivity extends AppCompatActivity {
+    final int REQUEST_CODE_FOR_NAME = 321;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data)
     {
         super.onActivityResult(requestCode, resultCode, data);
-        TextView tv5 = (TextView) findViewById(R.id.textView5);
-        tv5.setText(data.getStringExtra("ans"));
+        if(requestCode == REQUEST_CODE_FOR_NAME)
+        {
+            if (resultCode == RESULT_OK) {
+                TextView tv5 = (TextView) findViewById(R.id.textView5);
+                tv5.setText(data.getStringExtra("ans"));
+            }
+        }
     }
 }
 
